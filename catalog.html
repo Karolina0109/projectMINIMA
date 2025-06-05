@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - MINIMA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalog.css">
+
+</head>
+<body>
+    <!-- Оверлей для затемнения фона -->
+    <div class="overlay" id="overlay"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="logo">MINIMA</a></li>
+                <li><a href="index.html#products" class="nav-link">Наши изделия</a></li>
+                <li><a href="index.html#about" class="nav-link">О нас</a></li>
+                <li><a href="index.html#works" class="nav-link">Наши работы</a></li>
+                <li><a href="index.html#contacts" class="nav-link">Контакты</a></li>
+                <li class="nav-icons">
+                    <button class="cart-icon" id="cartButton">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button class="wishlist-icon" id="wishlistButton">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="account-icon" id="accountButton">
+                        <i class="far fa-user"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Всплывающее окно корзины -->
+    <div class="popup" id="cartPopup">
+        <div class="popup-header">
+            <div class="popup-title">Корзина / 4 шт.</div>
+            <button class="popup-close" id="closeCart">&times;</button>
+        </div>
+        
+        <div class="popup-content">
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/ТумбаШоколад.jpg" alt="Тумба">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Тумба «Шоколад»</div>
+                    <div class="popup-item-price">15 990 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/ДиванМинор.jpg" alt="Диван">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Диван «Минор»</div>
+                    <div class="popup-item-price">89 990 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/СтолТокио.jpg" alt="Стол">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Стол «Токио»</div>
+                    <div class="popup-item-price">58 000 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/КроватьНора.jpg" alt="Кровать">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Кровать «Нора»</div>
+                    <div class="popup-item-price">105 000 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-total">
+                <span>ИТОГО</span>
+                <span>268 980 ₽</span>
+            </div>
+            
+            <button class="popup-button">Заказать</button>
+        </div>
+    </div>
+    
+    <!-- Всплывающее окно избранного -->
+    <div class="popup" id="wishlistPopup">
+        <div class="popup-header">
+            <div class="popup-title">Избранное</div>
+            <button class="popup-close" id="closeWishlist">&times;</button>
+        </div>
+        
+        <div class="popup-content">
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/ТумбаШоколад.jpg" alt="Тумба">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Тумба «Шоколад»</div>
+                    <div class="popup-item-price">15 990 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/ДиванМинор.jpg" alt="Диван">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Диван «Минор»</div>
+                    <div class="popup-item-price">89 990 ₽</div>
+                </div>
+            </div>
+            
+            <div class="popup-item">
+                <div class="popup-item-image">
+                    <img src="Фото/СтолТокио.jpg" alt="Стол">
+                </div>
+                <div class="popup-item-details">
+                    <div class="popup-item-name">Стол «Токио»</div>
+                    <div class="popup-item-price">58 000 ₽</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Всплывающее окно личного кабинета -->
+    <div class="popup" id="accountPopup">
+        <div class="popup-header">
+            <div class="popup-title">Личный кабинет</div>
+            <button class="popup-close" id="closeAccount">&times;</button>
+        </div>
+        
+        <div class="popup-content">
+            <form class="login-form">
+                <div class="form-group">
+                    <label class="form-label">Почта</label>
+                    <input type="email" class="form-input" placeholder="Введите почту">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Пароль</label>
+                    <input type="password" class="form-input" placeholder="Введите пароль">
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                
+                <button type="button" class="popup-button">Войти</button>
+                
+                <div class="divider">
+                    <span class="divider-text">Или войдите через</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-button">
+                        <i class="fab fa-vk"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button class="social-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h1>КАТАЛОГ МЕБЕЛИ</h1>
+                <p>Выберите из нашей коллекции минималистичной мебели</p>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">Все категории</option>
+                        <option value="sofa">Диваны</option>
+                        <option value="bed">Кровати</option>
+                        <option value="table">Столы</option>
+                        <option value="chair">Кресла</option>
+                        <option value="storage">Мебель для хранения</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="sort-buttons">
+                        <button class="sort-button" id="sortAsc">Цена ↑</button>
+                        <button class="sort-button" id="sortDesc">Цена ↓</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Товары будут добавляться динамически -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 MINIMA. Золкина Каролина. Все права защищены.</p>
+        </div>
+    </footer>
+<script src="catalog.js"></script>
+</body>
+</html>

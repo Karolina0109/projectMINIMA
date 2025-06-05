@@ -1,2 +1,1 @@
-# projectMINIMA
-w
+
